@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+    body{
+        background: #eee
+    }
+    .about{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .avatar{
+        margin-left: 80px;
+    }
+
+    .myHref{
+        line-height: 0.5;
+        margin-top:200px;
+        margin-left: 20px;
+    }
+</style>
+<head>
+    <title th:text="AboutMe"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="about">
+    <div id="1" class="avatar">
+        <img class="mb-4" src="images\avatar.jfif" width="350" height="300"  hspace="5">
+    </div>
+    <div id="2" class="myHref">
+        <p>Коваль Александр Викторович. Студент группы ПТ-20818</p>
+        <p><a href="https://github.com/useer1337/MyRepository">GitHub</a></p>
+        <p>Docker</p>
+    </div>
+</div>
+</body>
+</html>
