@@ -1,21 +1,19 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-
- <style type="text/css">
+<style type="text/css">
     .text{
         margin-left: 50px;
     }
 </style>
-
 <head>
-    <title>Главная странца</title>
+    <title th:text="${title}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-<header th:insert="blocks/headerNotLogined :: header"></header>
+<header th:insert="blocks/headerLogined :: header"></header>
 <div class="text">
-    <p>Зарегестрируйся или войди что бы получить полный доступ к сайту!!!!!</p>
+    <p th:text="${hello} + '!'"></p>
 </div>
 </body>
 </html>

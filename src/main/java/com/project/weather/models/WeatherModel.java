@@ -52,7 +52,7 @@ public class WeatherModel {
         }
 
         else if(weatherJson.main.getTemp() > 10.0 && weatherJson.main.getTemp() <= 20.0){
-            return "\\images\\coldNorm.gif";
+            return "\\images\\warmNorm.gif";
         }
 
         else{

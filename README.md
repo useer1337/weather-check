@@ -1,2 +1,2 @@
 # MyRepository
-It's my repository
+Spring Security and MySQL

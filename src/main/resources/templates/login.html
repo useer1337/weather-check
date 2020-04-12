@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+    .wrapper{
+        margin: 80px;
+    }
+    .form-signin{
+        max-width:300px;
+        margin: 0 auto;
+    }
+
+    .form-control{
+        margin-top: 10px;
+    }
+
+    .warning{
+        margin-top: 5px;
+        margin-left: 55px;
+    }
+</style>
+<head>
+    <title>Вход</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/headerNotLogined :: header"></header>
+    <div class="wrapper">
+        <form class="form-signin" th:action="@{/login}" method="post">
+            <h1 class="h3 mb-3 font-weight-normal text-center">Авторзация</h1>
+            <label for="inputName" class="sr-only">Ваше имя</label>
+            <input type="text" name="username" id="inputName" class="form-control" placeholder="Ваше имя" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Пароль</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
+            <div th:if="${param.error}" class="warning">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}" class="warning">
+                You have been logged out.
+            </div>
+            <div class="checkbox mb-3 text-center">
+                <label>
+                    <a th:href="@{/registration}">Зарегестрироваться</a>
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+            <p class="mt-5 mb-3 text-muted  text-center">© 2017-2020</p>
+        </form>
+    </div>
+</body>
+</html>
